@@ -60,7 +60,6 @@ final class Search
     public function search(string $searchString): array
     {
         $results = [];
-        $count = 0;
         $searchString = trim($searchString);
         if (empty($searchString))
             return $results;
