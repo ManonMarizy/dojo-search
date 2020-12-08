@@ -57,22 +57,40 @@ final class Search
 //            return $results;
 //        }
 /*
-public function search(string $searchString): array
+    public function search(string $searchString): array
     {
         $results = [];
-
+        $count = 0;
         $searchString = trim($searchString);
         if (empty($searchString))
             return $results;
+        if (in_array($searchString, self::DATA)) {
+            $results[] = $searchString;
+            return $results;
+        }
+
+
+        if (preg_match ("/(\\\\)/i", $searchString)) {
+            return $results;
+        }
 
         $needle = str_replace(" ", ".*", preg_quote($searchString));
+
         $needle = str_replace("/", '\/', $needle);
+
         foreach (self::DATA as $key => $value) {
+            if (preg_match ("/(\\[a-z])/i", $value)) {
+                $results[] = $value;
+                return $results;
+            }
             if (preg_match ("/" . $needle . "/i", $value)) {
                 $results[] = $value;
             }
+
         }
 
         return $results;
     }
+
+
     */
