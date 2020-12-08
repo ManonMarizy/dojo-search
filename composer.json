@@ -1,0 +1,18 @@
+{
+    "name": "marty/dojo-search",
+    "authors": [
+        {
+            "name": "Matthieu Martinot",
+            "email": "matthieu.martinot@wildcodeschool.fr"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
